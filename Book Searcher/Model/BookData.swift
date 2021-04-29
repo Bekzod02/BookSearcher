@@ -25,9 +25,8 @@ struct Title: Codable {
 //struct Thumbnail: Codable {
 //    var thumbnail: String
 //}
-
-
 //items[0].volumeInfo.title
 //items[0].volumeInfo.imageLinks.thumbnail
 //items[8].volumeInfo.authors
 //items[7].volumeInfo.authors
+

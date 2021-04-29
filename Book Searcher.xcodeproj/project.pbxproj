@@ -17,7 +17,7 @@
 		C30B9F8D26335C8D001CB880 /* Book_Searcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C30B9F8B26335C8D001CB880 /* Book_Searcher.xcdatamodeld */; };
 		C30B9F8F26335C8E001CB880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30B9F8E26335C8E001CB880 /* Assets.xcassets */; };
 		C30B9F9226335C8E001CB880 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30B9F9026335C8E001CB880 /* LaunchScreen.storyboard */; };
-		C3288A5D26380AAA0021A943 /* DetailViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3288A5C26380AAA0021A943 /* DetailViewScreen.swift */; };
+		C3288A61263825CC0021A943 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3288A60263825CC0021A943 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		C30B9F8E26335C8E001CB880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C30B9F9126335C8E001CB880 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C30B9F9326335C8E001CB880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3288A5C26380AAA0021A943 /* DetailViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewScreen.swift; sourceTree = "<group>"; };
+		C3288A60263825CC0021A943 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				C30B9F8626335C8D001CB880 /* TableViewController.swift */,
-				C3288A5C26380AAA0021A943 /* DetailViewScreen.swift */,
+				C3288A60263825CC0021A943 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 				C306A32426340CFF00CB70D3 /* BookManager.swift in Sources */,
 				C30B9F8526335C8D001CB880 /* SceneDelegate.swift in Sources */,
 				C306A32E2634415500CB70D3 /* BookModel.swift in Sources */,
-				C3288A5D26380AAA0021A943 /* DetailViewScreen.swift in Sources */,
+				C3288A61263825CC0021A943 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

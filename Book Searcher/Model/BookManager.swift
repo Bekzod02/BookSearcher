@@ -8,7 +8,8 @@
 import UIKit
 
 protocol BookManagerDelegate {
-    func didUpdateBook(book: BookModel)
+    func didUpdateBook(book: BookModel) 
+    func didFailWithError(error: Error)
 }
 
 struct BookManager {
@@ -29,7 +30,7 @@ struct BookManager {
         
         let task = sessison.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print(error!)
+                delegate?.didFailWithError(error: error!)
                 return
             }
             if let safeData = data {
@@ -49,6 +50,8 @@ struct BookManager {
         do {
             let decodedData = try decoder.decode(BookData.self, from: bookData)
             let title = decodedData.items[0].volumeInfo.title
+            //let author = decodedData.items[0].volumeInfo.authors
+            //print(author)
             //let thumbnail = decodedData.items[0].volumeInfo.imageLinks.thumbnail
             //let author = decodedData.items[7].volumeInfo.authors[0]
             print(title)
