@@ -50,12 +50,10 @@ struct BookManager {
         do {
             let decodedData = try decoder.decode(BookData.self, from: bookData)
             let title = decodedData.items[0].volumeInfo.title
-            //let author = decodedData.items[0].volumeInfo.authors
-            //print(author)
-            //let thumbnail = decodedData.items[0].volumeInfo.imageLinks.thumbnail
-            //let author = decodedData.items[7].volumeInfo.authors[0]
-            print(title)
-            let book = BookModel(bookName: title)
+            let author = decodedData.items[0].volumeInfo.authors
+            let thumbnail = decodedData.items[0].volumeInfo.imageLinks.thumbnail
+            print(thumbnail)
+            let book = BookModel(bookName: title, bookAuthor: author, thumbnailImage: thumbnail)
             return book
         } catch {
             print(error)

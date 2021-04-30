@@ -9,5 +9,7 @@ import Foundation
 
 struct BookModel {
     var bookName: String
-    //var bookAuthor: [String]?
+    var bookAuthor: [String]?
+    var thumbnailImage: String?
+    
 }

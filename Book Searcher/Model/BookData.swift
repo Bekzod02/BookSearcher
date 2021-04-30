@@ -12,21 +12,21 @@ struct BookData: Codable {
 }
 
 struct Items: Codable {
-    var volumeInfo: Title
+    var volumeInfo: Info
 }
 
-struct Title: Codable {
+struct Info: Codable {
     var title: String
-    //var imageLinks: Thumbnail
-    //var authors: [String]
+    var authors: [String]?
+    var imageLinks: ImageLinks
     
 }
 
-//struct Thumbnail: Codable {
-//    var thumbnail: String
-//}
-//items[0].volumeInfo.title
-//items[0].volumeInfo.imageLinks.thumbnail
-//items[8].volumeInfo.authors
-//items[7].volumeInfo.authors
 
+struct ImageLinks: Codable {
+    var thumbnail: String?
+    
+}
+
+
+//items[0].volumeInfo.imageLinks.thumbnail

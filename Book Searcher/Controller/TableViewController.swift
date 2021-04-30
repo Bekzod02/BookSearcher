@@ -10,11 +10,12 @@ import UIKit
 class TableViewController: UITableViewController {
     
     var itemArray: [String] = []
+    var authorName: [String] = []
+    //var thumbnail: String = ""
+    
     
     var bookManager = BookManager()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -31,6 +32,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableOfBooks", for: indexPath)
         cell.textLabel?.text = itemArray[indexPath.row]
+        cell.detailTextLabel?.text = authorName[indexPath.row]
         return cell
     }
     
@@ -55,12 +57,11 @@ extension TableViewController: UISearchBarDelegate {
 }
 
 extension TableViewController: BookManagerDelegate {
-
-    
     
     func didUpdateBook(book: BookModel) {
         DispatchQueue.main.async {
             self.itemArray.append(book.bookName)
+            self.authorName.append(contentsOf: book.bookAuthor ?? ["Could not find the name"])
             self.tableView.reloadData()
         }
     }
@@ -69,12 +70,12 @@ extension TableViewController: BookManagerDelegate {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue,
-      sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         let detailVC = segue.destination as? DetailViewController
         DispatchQueue.main.async {
             detailVC?.bookNameLabel.text = self.itemArray[0]
+            detailVC?.authorsNameLabel.text = self.authorName[0]
         }
     }
 
