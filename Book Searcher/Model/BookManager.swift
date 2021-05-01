@@ -52,8 +52,8 @@ struct BookManager {
             let title = decodedData.items[0].volumeInfo.title
             let author = decodedData.items[0].volumeInfo.authors
             let thumbnail = decodedData.items[0].volumeInfo.imageLinks.thumbnail
-            print(thumbnail)
-            let book = BookModel(bookName: title, bookAuthor: author, thumbnailImage: thumbnail)
+            let description = decodedData.items[0].volumeInfo.description
+            let book = BookModel(bookName: title, bookAuthor: author, thumbnailImage: thumbnail, descriptionName: description)
             return book
         } catch {
             print(error)

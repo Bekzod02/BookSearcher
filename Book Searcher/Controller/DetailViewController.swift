@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var authorsNameLabel: UILabel!
+    @IBOutlet weak var decriptionText: UILabel!
     @IBOutlet weak var thumbnsailsImage: UIImageView!
     
     override func viewDidLoad() {

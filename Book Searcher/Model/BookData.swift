@@ -13,15 +13,15 @@ struct BookData: Codable {
 
 struct Items: Codable {
     var volumeInfo: Info
+    
 }
 
 struct Info: Codable {
     var title: String
     var authors: [String]?
     var imageLinks: ImageLinks
-    
+    var description: String?
 }
-
 
 struct ImageLinks: Codable {
     var thumbnail: String?

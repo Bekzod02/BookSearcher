@@ -11,5 +11,6 @@ struct BookModel {
     var bookName: String
     var bookAuthor: [String]?
     var thumbnailImage: String?
+    var descriptionName: String? 
     
 }
