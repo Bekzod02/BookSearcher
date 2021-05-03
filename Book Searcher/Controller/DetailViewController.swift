@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var decriptionText: UILabel!
     @IBOutlet weak var thumbnsailsImage: UIImageView!
     var book: BookModel?
-
+    
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,6 @@ class DetailViewController: UIViewController {
         let url = URL(string: urlString)!
         thumbnsailsImage.downloaded(from: url)
     }
-    
   
 }
 

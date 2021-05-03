@@ -31,6 +31,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableOfBooks", for: indexPath)
         cell.textLabel?.text = books[indexPath.row].bookName
         cell.detailTextLabel?.text = books[indexPath.row].bookAuthor?[0]
+        // could not implement my code to show the picture in each cell
         return cell
     }
     
