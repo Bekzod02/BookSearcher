@@ -25,7 +25,6 @@ struct Info: Codable {
 
 struct ImageLinks: Codable {
     var thumbnail: String?
-    
 }
 
 
